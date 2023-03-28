@@ -10,7 +10,10 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-
+- task: MavenAuthenticate@0
+  inputs:
+    artifactsFeeds: 'anshika'
+    mavenServiceConnections: 'maven_anshika'
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
@@ -20,7 +23,7 @@ steps:
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'clean install'
+    goals: 'clean deploy'
 
 - task: CopyFiles@2
   inputs:
