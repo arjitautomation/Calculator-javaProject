@@ -10,4 +10,28 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
+<repositories> 
+<repository>
+  <id>anshika</id>
+  <url>https://pkgs.dev.azure.com/arjitdevops/Devops/_packaging/anshika/maven/v1</url>
+  <releases>
+    <enabled>true</enabled>
+  </releases>
+  <snapshots>
+    <enabled>true</enabled>
+  </snapshots>
+</repository>
+</repositories>     
+<distributionManagement>
+<repository>
+  <id>anshika</id>
+  <url>https://pkgs.dev.azure.com/arjitdevops/Devops/_packaging/anshika/maven/v1</url>
+  <releases>
+    <enabled>true</enabled>
+  </releases>
+  <snapshots>
+    <enabled>true</enabled>
+  </snapshots>
+</repository>    
+<distributionManagement>    
 </project>
